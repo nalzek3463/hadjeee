@@ -91,7 +91,7 @@
                                 </a>
                             </div>
                             <div class="mobile-indicator d-none d-md-block">
-                                <a href="wishlist.html" class="mobile-indicator__button">
+                                <a href="wishlist.php" class="mobile-indicator__button">
                                     <span class="mobile-indicator__icon">
                                         <svg width="20" height="20">
                                             <path d="M14,3c2.2,0,4,1.8,4,4c0,4-5.2,10-8,10S2,11,2,7c0-2.2,1.8-4,4-4c1,0,1.9,0.4,2.7,1L10,5.2L11.3,4C12.1,3.4,13,3,14,3 M14,1
@@ -870,7 +870,7 @@
                 </div>
                 <div class="header__indicators">
                     <div class="indicator">
-                        <a href="wishlist.html" class="indicator__button">
+                        <a href="wishlist.php" class="indicator__button">
                             <span class="indicator__icon">
                                 <svg width="32" height="32">
                                     <path d="M23,4c3.9,0,7,3.1,7,7c0,6.3-11.4,15.9-14,16.9C13.4,26.9,2,17.3,2,11c0-3.9,3.1-7,7-7c2.1,0,4.1,1,5.4,2.6l1.6,2l1.6-2
