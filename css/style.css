@@ -15548,6 +15548,7 @@ select.form-control::-ms-expand {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+  border-radius: 10px;
 }
 
 .product-card--layout--grid .product-card__addtocart-full,
