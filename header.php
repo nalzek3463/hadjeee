@@ -113,12 +113,12 @@
                 <div class="header__topbar-start-bg"></div>
                 <div class="header__topbar-start">
                     <div class="topbar topbar--spaceship-start">
-                        <div class="topbar__item-text d-none d-xxl-flex"><a class="topbar__link" href="index.html">Početna</a></div>
-                        <div class="topbar__item-text"><a class="topbar__link" href="shop-grid-4-columns-sidebar.html">Webshop</a></div>
-                        <div class="topbar__item-text"><a class="topbar__link" href="#">Otkup vozila</a></div>
-                        <div class="topbar__item-text"><a class="topbar__link" href="about-us.html">O nama</a></div>
-                        <div class="topbar__item-text"><a class="topbar__link" href="contact-us-v1.html">Kontak</a></div>
-                        <div class="topbar__item-text"><a class="topbar__link" href="blog-grid-left-sidebar.html">Blog</a></div>
+                        <div class="topbar__item-text d-none d-xxl-flex"><a class="topbar__link" href="index.php">Početna</a></div>
+                        <div class="topbar__item-text"><a class="topbar__link" href="webshop.php">Webshop</a></div>
+                        <div class="topbar__item-text"><a class="topbar__link" href="otkupvozila.php">Otkup vozila</a></div>
+                        <div class="topbar__item-text"><a class="topbar__link" href="onama.php">O nama</a></div>
+                        <div class="topbar__item-text"><a class="topbar__link" href="kontakt.php">Kontakt</a></div>
+                        <div class="topbar__item-text"><a class="topbar__link" href="blog.php">Blog</a></div>
                     </div>
                 </div>
                 <div class="header__topbar-end-bg"></div>

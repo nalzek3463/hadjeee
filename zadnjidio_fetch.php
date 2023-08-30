@@ -12,7 +12,7 @@ if (!$conn) {
     echo 'Connection error: ' . mysqli_connect_error();
 }
 //write query 
-$sql = 'SELECT artikal, kb, kw, ccm, slika1 FROM dijelovi1 ORDER BY id DESC LIMIT 10';
+$sql = 'SELECT id, artikal, kb, kw, ccm, slika1 FROM dijelovi1 ORDER BY id DESC LIMIT 10';
 
 //make query & get result
 $result = mysqli_query($conn, $sql);
@@ -27,9 +27,14 @@ mysqli_free_result($result);
 mysqli_close($conn);
 
 foreach ($products as $product) {
-    $artikal = $product['artikal'];
+    $id = $product['id'];
+    $marka = $artikal['marka'];
+    $tip = $artikal['tip'];
+    $proizvod = $product['artikal'];
     $kataloskibroj = $product['kb'];
-    $slika = $product['slika1'];
+    $slika1 = $product['slika1'];
+    $slika2 = $artikal['slika2'];
+    $slika3 = $artikal['slika3'];
     $kw = $product['kw'];
     $ccm = $product['ccm'];
                           
@@ -39,14 +44,14 @@ foreach ($products as $product) {
             <div class="product-card product-card--layout--grid">
                 <div class="product-card__image">
                     <div class="image image--type--product">
-                        <a href="product-full.php" class="image__body">
-                            <img class="image__tag" src="http://171.22.22.137/data/slike/$slika" alt="$artikal">
+                        <a href="product-full.php?id=$id" target="_blank" class="image__body">
+                            <img class="image__tag" src="http://171.22.22.137/data/slike/$slika1" alt="$proizvod">
                         </a>
                     </div>
                 </div>
                 <div class="product-card__info">
                     <div class="input-group" style="display: block!important;">
-                        <a href="product-full.html" style="font-weight: bold; color: black!important; display: flex; justify-content: center; align-items: center;"> $artikal </a>  
+                        <a href="product-full.php?id=$id" style="font-weight: bold; color: black!important; display: flex; justify-content: center; align-items: center;"> $proizvod </a>  
                         <p class="w-100" style="font-size: 14px; padding-top: 10px; padding-left: 20px; color: gray;">
                             <i class="fas fa-chevron-circle-right" style="color: #fbaa00!important;"></i> <b>KB:</b> $kataloskibroj
                         </p> 
