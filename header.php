@@ -44,27 +44,18 @@
                                 <input type="text" class="mobile-search__input" placeholder="Upiši naziv ili kataloški broj dijela">
                                 <button type="button" class="mobile-search__vehicle-picker" aria-label="Select Vehicle">
                                     <svg width="20" height="20">
-                                        <path d="M6.6,2c2,0,4.8,0,6.8,0c1,0,2.9,0.8,3.6,2.2C17.7,5.7,17.9,7,18.4,7C20,7,20,8,20,8v1h-1v7.5c0,0.8-0.7,1.5-1.5,1.5h-1
-	c-0.8,0-1.5-0.7-1.5-1.5V16H5v0.5C5,17.3,4.3,18,3.5,18h-1C1.7,18,1,17.3,1,16.5V16V9H0V8c0,0,0.1-1,1.6-1C2.1,7,2.3,5.7,3,4.2
-	C3.7,2.8,5.6,2,6.6,2z M13.3,4H6.7c-0.8,0-1.4,0-2,0.7c-0.5,0.6-0.8,1.5-1,2C3.6,7.1,3.5,7.9,3.7,8C4.5,8.4,6.1,9,10,9
-	c4,0,5.4-0.6,6.3-1c0.2-0.1,0.2-0.8,0-1.2c-0.2-0.4-0.5-1.5-1-2C14.7,4,14.1,4,13.3,4z M4,10c-0.4-0.3-1.5-0.5-2,0
-	c-0.4,0.4-0.4,1.6,0,2c0.5,0.5,4,0.4,4,0C6,11.2,4.5,10.3,4,10z M14,12c0,0.4,3.5,0.5,4,0c0.4-0.4,0.4-1.6,0-2c-0.5-0.5-1.3-0.3-2,0
-	C15.5,10.2,14,11.3,14,12z" />
+                                        <path d="M6.6,2c2,0,4.8,0,6.8,0c1,0,2.9,0.8,3.6,2.2C17.7,5.7,17.9,7,18.4,7C20,7,20,8,20,8v1h-1v7.5c0,0.8-0.7,1.5-1.5,1.5h-1c-0.8,0-1.5-0.7-1.5-1.5V16H5v0.5C5,17.3,4.3,18,3.5,18h-1C1.7,18,1,17.3,1,16.5V16V9H0V8c0,0,0.1-1,1.6-1C2.1,7,2.3,5.7,3,4.2C3.7,2.8,5.6,2,6.6,2z M13.3,4H6.7c-0.8,0-1.4,0-2,0.7c-0.5,0.6-0.8,1.5-1,2C3.6,7.1,3.5,7.9,3.7,8C4.5,8.4,6.1,9,10,9c4,0,5.4-0.6,6.3-1c0.2-0.1,0.2-0.8,0-1.2c-0.2-0.4-0.5-1.5-1-2C14.7,4,14.1,4,13.3,4z M4,10c-0.4-0.3-1.5-0.5-2,0c-0.4,0.4-0.4,1.6,0,2c0.5,0.5,4,0.4,4,0C6,11.2,4.5,10.3,4,10z M14,12c0,0.4,3.5,0.5,4,0c0.4-0.4,0.4-1.6,0-2c-0.5-0.5-1.3-0.3-2,0C15.5,10.2,14,11.3,14,12z" />
                                     </svg>
                                     <span class="mobile-search__vehicle-picker-label">Vehicle</span>
                                 </button>
                                 <button type="submit" class="mobile-search__button mobile-search__button--search">
                                     <svg width="20" height="20">
-                                        <path d="M19.2,17.8c0,0-0.2,0.5-0.5,0.8c-0.4,0.4-0.9,0.6-0.9,0.6s-0.9,0.7-2.8-1.6c-1.1-1.4-2.2-2.8-3.1-3.9C10.9,14.5,9.5,15,8,15
-	c-3.9,0-7-3.1-7-7s3.1-7,7-7s7,3.1,7,7c0,1.5-0.5,2.9-1.3,4c1.1,0.8,2.5,2,4,3.1C20,16.8,19.2,17.8,19.2,17.8z M8,3C5.2,3,3,5.2,3,8
-	c0,2.8,2.2,5,5,5c2.8,0,5-2.2,5-5C13,5.2,10.8,3,8,3z" />
+                                        <path d="M19.2,17.8c0,0-0.2,0.5-0.5,0.8c-0.4,0.4-0.9,0.6-0.9,0.6s-0.9,0.7-2.8-1.6c-1.1-1.4-2.2-2.8-3.1-3.9C10.9,14.5,9.5,15,8,15c-3.9,0-7-3.1-7-7s3.1-7,7-7s7,3.1,7,7c0,1.5-0.5,2.9-1.3,4c1.1,0.8,2.5,2,4,3.1C20,16.8,19.2,17.8,19.2,17.8z M8,3C5.2,3,3,5.2,3,8c0,2.8,2.2,5,5,5c2.8,0,5-2.2,5-5C13,5.2,10.8,3,8,3z" />
                                     </svg>
                                 </button>
                                 <button type="button" class="mobile-search__button mobile-search__button--close">
                                     <svg width="20" height="20">
-                                        <path d="M16.7,16.7L16.7,16.7c-0.4,0.4-1,0.4-1.4,0L10,11.4l-5.3,5.3c-0.4,0.4-1,0.4-1.4,0l0,0c-0.4-0.4-0.4-1,0-1.4L8.6,10L3.3,4.7
-	c-0.4-0.4-0.4-1,0-1.4l0,0c0.4-0.4,1-0.4,1.4,0L10,8.6l5.3-5.3c0.4-0.4,1-0.4,1.4,0l0,0c0.4,0.4,0.4,1,0,1.4L11.4,10l5.3,5.3
-	C17.1,15.7,17.1,16.3,16.7,16.7z" />
+                                        <path d="M16.7,16.7L16.7,16.7c-0.4,0.4-1,0.4-1.4,0L10,11.4l-5.3,5.3c-0.4,0.4-1,0.4-1.4,0l0,0c-0.4-0.4-0.4-1,0-1.4L8.6,10L3.3,4.7c-0.4-0.4-0.4-1,0-1.4l0,0c0.4-0.4,1-0.4,1.4,0L10,8.6l5.3-5.3c0.4-0.4,1-0.4,1.4,0l0,0c0.4,0.4,0.4,1,0,1.4L11.4,10l5.3,5.3C17.1,15.7,17.1,16.3,16.7,16.7z" />
                                     </svg>
                                 </button>
                                 <div class="mobile-search__field"></div>
@@ -74,9 +65,7 @@
                             <div class="mobile-indicator mobile-indicator--search d-md-none">
                                 <button type="button" class="mobile-indicator__button">
                                     <span class="mobile-indicator__icon"><svg width="20" height="20">
-                                            <path d="M19.2,17.8c0,0-0.2,0.5-0.5,0.8c-0.4,0.4-0.9,0.6-0.9,0.6s-0.9,0.7-2.8-1.6c-1.1-1.4-2.2-2.8-3.1-3.9C10.9,14.5,9.5,15,8,15
-	c-3.9,0-7-3.1-7-7s3.1-7,7-7s7,3.1,7,7c0,1.5-0.5,2.9-1.3,4c1.1,0.8,2.5,2,4,3.1C20,16.8,19.2,17.8,19.2,17.8z M8,3C5.2,3,3,5.2,3,8
-	c0,2.8,2.2,5,5,5c2.8,0,5-2.2,5-5C13,5.2,10.8,3,8,3z" />
+                                            <path d="M19.2,17.8c0,0-0.2,0.5-0.5,0.8c-0.4,0.4-0.9,0.6-0.9,0.6s-0.9,0.7-2.8-1.6c-1.1-1.4-2.2-2.8-3.1-3.9C10.9,14.5,9.5,15,8,15c-3.9,0-7-3.1-7-7s3.1-7,7-7s7,3.1,7,7c0,1.5-0.5,2.9-1.3,4c1.1,0.8,2.5,2,4,3.1C20,16.8,19.2,17.8,19.2,17.8z M8,3C5.2,3,3,5.2,3,8c0,2.8,2.2,5,5,5c2.8,0,5-2.2,5-5C13,5.2,10.8,3,8,3z" />
                                         </svg>
                                     </span>
                                 </button>
@@ -84,8 +73,7 @@
                             <div class="mobile-indicator d-none d-md-block">
                                 <a href="account-login.html" class="mobile-indicator__button">
                                     <span class="mobile-indicator__icon"><svg width="20" height="20">
-                                            <path d="M20,20h-2c0-4.4-3.6-8-8-8s-8,3.6-8,8H0c0-4.2,2.6-7.8,6.3-9.3C4.9,9.6,4,7.9,4,6c0-3.3,2.7-6,6-6s6,2.7,6,6
-	c0,1.9-0.9,3.6-2.3,4.7C17.4,12.2,20,15.8,20,20z M14,6c0-2.2-1.8-4-4-4S6,3.8,6,6s1.8,4,4,4S14,8.2,14,6z" />
+                                            <path d="M20,20h-2c0-4.4-3.6-8-8-8s-8,3.6-8,8H0c0-4.2,2.6-7.8,6.3-9.3C4.9,9.6,4,7.9,4,6c0-3.3,2.7-6,6-6s6,2.7,6,6c0,1.9-0.9,3.6-2.3,4.7C17.4,12.2,20,15.8,20,20z M14,6c0-2.2-1.8-4-4-4S6,3.8,6,6s1.8,4,4,4S14,8.2,14,6z" />
                                         </svg>
                                     </span>
                                 </a>
@@ -94,8 +82,7 @@
                                 <a href="wishlist.php" class="mobile-indicator__button">
                                     <span class="mobile-indicator__icon">
                                         <svg width="20" height="20">
-                                            <path d="M14,3c2.2,0,4,1.8,4,4c0,4-5.2,10-8,10S2,11,2,7c0-2.2,1.8-4,4-4c1,0,1.9,0.4,2.7,1L10,5.2L11.3,4C12.1,3.4,13,3,14,3 M14,1
-	c-1.5,0-2.9,0.6-4,1.5C8.9,1.6,7.5,1,6,1C2.7,1,0,3.7,0,7c0,5,6,12,10,12s10-7,10-12C20,3.7,17.3,1,14,1L14,1z" />
+                                            <path d="M14,3c2.2,0,4,1.8,4,4c0,4-5.2,10-8,10S2,11,2,7c0-2.2,1.8-4,4-4c1,0,1.9,0.4,2.7,1L10,5.2L11.3,4C12.1,3.4,13,3,14,3 M14,1c-1.5,0-2.9,0.6-4,1.5C8.9,1.6,7.5,1,6,1C2.7,1,0,3.7,0,7c0,5,6,12,10,12s10-7,10-12C20,3.7,17.3,1,14,1L14,1z" />
                                         </svg>
                                     </span>
                                 </a>
@@ -873,70 +860,46 @@
                         <a href="wishlist.php" class="indicator__button">
                             <span class="indicator__icon">
                                 <svg width="32" height="32">
-                                    <path d="M23,4c3.9,0,7,3.1,7,7c0,6.3-11.4,15.9-14,16.9C13.4,26.9,2,17.3,2,11c0-3.9,3.1-7,7-7c2.1,0,4.1,1,5.4,2.6l1.6,2l1.6-2
-	C18.9,5,20.9,4,23,4 M23,2c-2.8,0-5.4,1.3-7,3.4C14.4,3.3,11.8,2,9,2c-5,0-9,4-9,9c0,8,14,19,16,19s16-11,16-19C32,6,28,2,23,2L23,2
-	z" />
+                                    <path d="M23,4c3.9,0,7,3.1,7,7c0,6.3-11.4,15.9-14,16.9C13.4,26.9,2,17.3,2,11c0-3.9,3.1-7,7-7c2.1,0,4.1,1,5.4,2.6l1.6,2l1.6-2C18.9,5,20.9,4,23,4 M23,2c-2.8,0-5.4,1.3-7,3.4C14.4,3.3,11.8,2,9,2c-5,0-9,4-9,9c0,8,14,19,16,19s16-11,16-19C32,6,28,2,23,2L23,2z" />
                                 </svg>
                             </span>
                         </a>
                     </div>
                     <div class="indicator indicator--trigger--click">
-                        <a href="account-login.html" class="indicator__button">
+                        <a href="login.php" class="indicator__button">
                             <span class="indicator__icon">
                                 <svg width="32" height="32">
-                                    <path d="M16,18C9.4,18,4,23.4,4,30H2c0-6.2,4-11.5,9.6-13.3C9.4,15.3,8,12.8,8,10c0-4.4,3.6-8,8-8s8,3.6,8,8c0,2.8-1.5,5.3-3.6,6.7
-	C26,18.5,30,23.8,30,30h-2C28,23.4,22.6,18,16,18z M22,10c0-3.3-2.7-6-6-6s-6,2.7-6,6s2.7,6,6,6S22,13.3,22,10z" />
+                                    <path d="M16,18C9.4,18,4,23.4,4,30H2c0-6.2,4-11.5,9.6-13.3C9.4,15.3,8,12.8,8,10c0-4.4,3.6-8,8-8s8,3.6,8,8c0,2.8-1.5,5.3-3.6,6.7C26,18.5,30,23.8,30,30h-2C28,23.4,22.6,18,16,18z M22,10c0-3.3-2.7-6-6-6s-6,2.7-6,6s2.7,6,6,6S22,13.3,22,10z" />
                                 </svg>
                             </span>
-                            <span class="indicator__title">Hello, Log In</span>
-                            <span class="indicator__value">My Account</span>
+                            <span class="indicator__title">Prijavite se</span>
+                            <span class="indicator__value">Moj profil</span>
                         </a>
                         <div class="indicator__content">
                             <div class="account-menu">
                                 <form class="account-menu__form">
                                     <div class="account-menu__form-title">
-                                        Log In to Your Account
+                                        Prijavite se
+                                    </div>
+                                    <?php if(isset($_GET['error'])) { ?>
+                                        <p class="error"> <?php echo $_GET['error']; ?> </p>
+                                    <?php } ?>
+                                    <div class="form-group">
+                                        <label for="korisnicko_ime" class="sr-only">Korisničko ime</label>
+                                        <input id="korisnicko_ime" type="text" class="form-control form-control-sm" placeholder="Korisničko ime" name="korisnicko_ime">
                                     </div>
                                     <div class="form-group">
-                                        <label for="header-signin-email" class="sr-only">Email address</label>
-                                        <input id="header-signin-email" type="email" class="form-control form-control-sm" placeholder="Email address">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="header-signin-password" class="sr-only">Password</label>
+                                        <label for="sifra" class="sr-only">Šifra</label>
                                         <div class="account-menu__form-forgot">
-                                            <input id="header-signin-password" type="password" class="form-control form-control-sm" placeholder="Password">
-                                            <a href="" class="account-menu__form-forgot-link">Forgot?</a>
+                                            <input id="sifra" type="password" class="form-control form-control-sm" placeholder="Šifra" name="sifra">
+                                            <a href="" class="account-menu__form-forgot-link">Zaboravio šifru?</a>
                                         </div>
                                     </div>
                                     <div class="form-group account-menu__form-button">
-                                        <button type="submit" class="btn btn-primary btn-sm">Login</button>
-                                    </div>
-                                    <div class="account-menu__form-link">
-                                        <a href="account-login.html">Create An Account</a>
+                                        <button type="submit" class="btn btn-primary btn-sm">Prijava</button>
                                     </div>
                                 </form>
                                 <div class="account-menu__divider"></div>
-                                <a href="" class="account-menu__user">
-                                    <div class="account-menu__user-avatar">
-                                        <img src="images/avatars/avatar-4.jpg" alt="">
-                                    </div>
-                                    <div class="account-menu__user-info">
-                                        <div class="account-menu__user-name">Ryan Ford</div>
-                                        <div class="account-menu__user-email">red-parts@example.com</div>
-                                    </div>
-                                </a>
-                                <div class="account-menu__divider"></div>
-                                <ul class="account-menu__links">
-                                    <li><a href="account-dashboard.html">Dashboard</a></li>
-                                    <li><a href="account-dashboard.html">Garage</a></li>
-                                    <li><a href="account-profile.html">Edit Profile</a></li>
-                                    <li><a href="account-orders.html">Order History</a></li>
-                                    <li><a href="account-addresses.html">Addresses</a></li>
-                                </ul>
-                                <div class="account-menu__divider"></div>
-                                <ul class="account-menu__links">
-                                    <li><a href="account-login.html">Logout</a></li>
-                                </ul>
                             </div>
                         </div>
                     </div>

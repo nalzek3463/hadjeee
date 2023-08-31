@@ -12,7 +12,7 @@ if (!$conn) {
     echo 'Connection error: ' . mysqli_connect_error();
 }
 //write query 
-$sql = 'SELECT id, artikal, kb, kw, ccm, slika1 FROM dijelovi1 ORDER BY id DESC LIMIT 10';
+$sql = 'SELECT id, artikal, marka, tip,  kb, kw, ccm, slika1, slika2, slika3 FROM dijelovi1 ORDER BY id DESC LIMIT 10';
 
 //make query & get result
 $result = mysqli_query($conn, $sql);
@@ -28,13 +28,13 @@ mysqli_close($conn);
 
 foreach ($products as $product) {
     $id = $product['id'];
-    $marka = $artikal['marka'];
-    $tip = $artikal['tip'];
+    $marka = $product['marka'];
+    $tip = $product['tip'];
     $proizvod = $product['artikal'];
     $kataloskibroj = $product['kb'];
     $slika1 = $product['slika1'];
-    $slika2 = $artikal['slika2'];
-    $slika3 = $artikal['slika3'];
+    $slika2 = $product['slika2'];
+    $slika3 = $product['slika3'];
     $kw = $product['kw'];
     $ccm = $product['ccm'];
                           
@@ -43,6 +43,13 @@ foreach ($products as $product) {
         <div class="block-products-carousel__cell">
             <div class="product-card product-card--layout--grid">
                 <div class="product-card__image">
+                    <div class="product-card__actions-list">
+                        <button class="product-card__action dodaj_wishlist" type="button" data-product-id="<?php echo $id; ?>" aria-label="Wishlist">
+                            <svg width="16" height="16">
+                                <path d="M13.9,8.4l-5.4,5.4c-0.3,0.3-0.7,0.3-1,0L2.1,8.4c-1.5-1.5-1.5-3.8,0-5.3C2.8,2.4,3.8,2,4.8,2s1.9,0.4,2.6,1.1L8,3.7l0.6-0.6C9.3,2.4,10.3,2,11.3,2c1,0,1.9,0.4,2.6,1.1C15.4,4.6,15.4,6.9,13.9,8.4z" />
+                            </svg>
+                        </button>
+                    </div>
                     <div class="image image--type--product">
                         <a href="product-full.php?id=$id" target="_blank" class="image__body">
                             <img class="image__tag" src="http://171.22.22.137/data/slike/$slika1" alt="$proizvod">
@@ -50,21 +57,20 @@ foreach ($products as $product) {
                     </div>
                 </div>
                 <div class="product-card__info">
-                    <div class="input-group" style="display: block!important;">
-                        <a href="product-full.php?id=$id" style="font-weight: bold; color: black!important; display: flex; justify-content: center; align-items: center;"> $proizvod </a>  
-                        <p class="w-100" style="font-size: 14px; padding-top: 10px; padding-left: 20px; color: gray;">
-                            <i class="fas fa-chevron-circle-right" style="color: #fbaa00!important;"></i> <b>KB:</b> $kataloskibroj
-                        </p> 
-                        <p class="w-100" style="font-size: 14px; padding-left: 20px; color: gray;">
-                            <i class="fas fa-chevron-circle-right" style="color: #fbaa00!important;"></i> <b>KW:</b> $kw 
-                        </p>
-                        <p class="w-100" style="font-size: 14px; padding-left: 20px; color: gray;">
-                            <i class="fas fa-chevron-circle-right" style="color: #fbaa00!important;"></i> <b>CCM:</b> $ccm
-                        </p>
-                        <p class="w-100" style="font-size: 14px; padding-left: 20px; color: gray;">
-                            <i class="fas fa-chevron-circle-right" style="color: #fbaa00!important;"></i><b> Gorivo:</b> Dizel
-                        </p>
+                    <div class="product-card__name">
+                        <div>
+                            <a href="product-full.php?id=$id">$proizvod</a>
+                        </div>
                     </div>
+                        <div class="product-card__meta" style="padding-top: 20px;"><span class="product-card__meta-title"><b>ID: $id</b></span></div>
+                    <ul style="color: #878787; font-size: 15px; padding-top: 22px;">
+                        <li>Marka: $marka</li>
+                        <li>Tip: $tip</li>
+                        <li>Kataloški broj: $kataloskibroj</li>
+                        <li>KW: $kw</li>
+                        <li>CCM: $ccm</li>
+                        <li>Gorivo: Dizel</li>
+                    </ul>                          
                 </div>
                 <div class="product-card__footer">
                     <div class="input-group">

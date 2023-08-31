@@ -101,8 +101,7 @@ foreach ($products as $product) {
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div class="product-card__info">
-                                                
+                                            <div class="product-card__info"> 
                                                 <div class="product-card__name">
                                                     <div>
                                                         <a href="product-full.php?id=$id">$proizvod</a>
