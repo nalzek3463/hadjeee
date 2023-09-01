@@ -1,11 +1,16 @@
+<?php 
+ session_start(); // Start the session
+ include("db_conn.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <title>Home One — Red Parts</title>
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>Target Auto-Otpad</title>
+    <link rel="icon" type="image/png" href="/AutoTarget/images/logo/kljuc.png">
     <!-- fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i">
     <!-- css -->
@@ -866,42 +871,9 @@
                         </a>
                     </div>
                     <div class="indicator indicator--trigger--click">
-                        <a href="login.php" class="indicator__button">
-                            <span class="indicator__icon">
-                                <svg width="32" height="32">
-                                    <path d="M16,18C9.4,18,4,23.4,4,30H2c0-6.2,4-11.5,9.6-13.3C9.4,15.3,8,12.8,8,10c0-4.4,3.6-8,8-8s8,3.6,8,8c0,2.8-1.5,5.3-3.6,6.7C26,18.5,30,23.8,30,30h-2C28,23.4,22.6,18,16,18z M22,10c0-3.3-2.7-6-6-6s-6,2.7-6,6s2.7,6,6,6S22,13.3,22,10z" />
-                                </svg>
-                            </span>
-                            <span class="indicator__title">Prijavite se</span>
-                            <span class="indicator__value">Moj profil</span>
-                        </a>
-                        <div class="indicator__content">
-                            <div class="account-menu">
-                                <form class="account-menu__form">
-                                    <div class="account-menu__form-title">
-                                        Prijavite se
-                                    </div>
-                                    <?php if(isset($_GET['error'])) { ?>
-                                        <p class="error"> <?php echo $_GET['error']; ?> </p>
-                                    <?php } ?>
-                                    <div class="form-group">
-                                        <label for="korisnicko_ime" class="sr-only">Korisničko ime</label>
-                                        <input id="korisnicko_ime" type="text" class="form-control form-control-sm" placeholder="Korisničko ime" name="korisnicko_ime">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="sifra" class="sr-only">Šifra</label>
-                                        <div class="account-menu__form-forgot">
-                                            <input id="sifra" type="password" class="form-control form-control-sm" placeholder="Šifra" name="sifra">
-                                            <a href="" class="account-menu__form-forgot-link">Zaboravio šifru?</a>
-                                        </div>
-                                    </div>
-                                    <div class="form-group account-menu__form-button">
-                                        <button type="submit" class="btn btn-primary btn-sm">Prijava</button>
-                                    </div>
-                                </form>
-                                <div class="account-menu__divider"></div>
-                            </div>
-                        </div>
+                        <?php
+                        include("check_login.php");
+                        ?>
                     </div>
                 </div>
             </div>

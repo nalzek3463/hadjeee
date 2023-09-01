@@ -1,17 +1,6 @@
 <?php include('header.php');
 
-// Spajanje na MySQL bazu podataka
-$servername = "localhost";
-$username = "nala";
-$password = "nala123";
-$dbname = "autotarget";
-
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-// check connection
-if (!$conn) {
-    echo 'Connection error: ' . mysqli_connect_error();
-}
+include("db_conn.php");
 
 $id = $_GET['id'];
 

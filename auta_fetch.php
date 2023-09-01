@@ -1,30 +1,12 @@
 <?php
-//connect database
-$servername = "localhost";
-$username = "nala";
-$password = "nala123";
-$dbname = "autotarget";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+include("db_conn.php");
 
-// check connection
-if (!$conn) {
-    echo 'Connection error: ' . mysqli_connect_error();
-}
-
-//write query 
 $auta = 'SELECT * FROM auta ORDER BY id DESC';
-
-//make query & get result
 $auta1 = mysqli_query($conn, $auta);
-
-// fetch the resulting rows as an array
 $product_cars = mysqli_fetch_all($auta1, MYSQLI_ASSOC);
 
-//free result from memory
 mysqli_free_result($auta1);
-
-//close connection
 mysqli_close($conn);
 
 

@@ -1,31 +1,15 @@
-<?php include("header.php"); 
+<?php 
+include("header.php"); 
+include("db_conn.php"); 
 
-// Spajanje na MySQL bazu podataka
-$servername = "localhost";
-$username = "nala";
-$password = "nala123";
-$dbname = "autotarget";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
 
-// check connection
-if (!$conn) {
-    echo 'Connection error: ' . mysqli_connect_error();
-}
-
-//write query 
 $sql = 'SELECT id, artikal, marka, tip, kb, kw, ccm, slika1, slika2, slika3 FROM dijelovi1 ORDER BY id DESC LIMIT 30';
-
-//make query & get result
 $result = mysqli_query($conn, $sql);
-
-// fetch the resulting rows as an array
 $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-//free result from memory
-mysqli_free_result($result);
 
-//close connection
+mysqli_free_result($result);
 mysqli_close($conn);
 
 foreach ($products as $product) {
