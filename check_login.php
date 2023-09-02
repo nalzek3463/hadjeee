@@ -7,6 +7,9 @@ if (isset($_SESSION['user_id'])) {
     
     $result = mysqli_query($conn,$query);
     if($result && mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $username = $row['username'];
+        $email = $row['email'];
 
     echo <<<HTML
 
@@ -28,7 +31,7 @@ if (isset($_SESSION['user_id'])) {
                     </div>
                     <div class="account-menu__user-info">
                         <div class="account-menu__user-name">$username</div>
-                        <div class="account-menu__user-email">red-parts@example.com</div>
+                        <div class="account-menu__user-email">$email</div>
                     </div>
                 </a>
                 <div class="account-menu__divider"></div>
