@@ -33,13 +33,13 @@
                         <div class="col-12 col-lg-9 mt-4 mt-lg-0">
                             <div class="card">
                                 <div class="card-header">
-                                    <h5>Edit Profile</h5>
+                                    <h5>Uredi profil</h5>
                                 </div>
                                 <div class="card-divider"></div>
                                     <div class="card-body card-body--padding--2">
                                         <div class="row no-gutters">
                                                 <div class="col-6 col-lg-7 col-xl-6 w-75 p-3">
-                                                <form action="insert_podatke_profil.php" method="post">
+                                                <form action="update_profil.php" method="post">
                                                     <div class="form-group">
                                                         <label for="profile-first-name">Ime</label>
                                                         <input type="text" class="form-control" id="profile-first-name" placeholder="Upišite Ime" name="Ime">

@@ -3609,7 +3609,7 @@ select.form-control::-ms-expand {
     transition: opacity 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
   .sidebar--offcanvas--mobile .sidebar__body {
-    position: fixed;
+    position: sticky;
     top: 0;
     bottom: 0;
     z-index: 1000;
@@ -3735,7 +3735,7 @@ select.form-control::-ms-expand {
 }
 
 .sidebar--offcanvas--always .sidebar__body {
-  position: fixed;
+  position: sticky;
   top: 0;
   bottom: 0;
   z-index: 1000;
@@ -15230,6 +15230,7 @@ select.form-control::-ms-expand {
  background .08s;
   background-color: #fff;
   color: #fbaa00;
+  border-top-right-radius: 15px!important;
 }
 
 .product-card .product-card__action:hover {
@@ -20902,6 +20903,8 @@ select.form-control::-ms-expand {
   height: 30px!important;
   line-height: 10px!important;
 }
+
+
 
 
 
