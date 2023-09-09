@@ -179,7 +179,7 @@ html {
 
 body {
   height: 100%;
-  background: #fafafa;
+  background: #f3f3f3;
   color: #262626;
   font-family: "Roboto", "sans-serif";
   font-size: 16px;
@@ -15215,8 +15215,8 @@ select.form-control::-ms-expand {
 */
 .product-card {
   background-color: #fff;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.09);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.09);
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .product-card .product-card__action {
@@ -20902,6 +20902,25 @@ select.form-control::-ms-expand {
   margin-bottom: 20px!important;
   height: 30px!important;
   line-height: 10px!important;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#reset-filter {
+  margin-bottom: 15px!important;
+  height: 30px!important;
+  line-height: 10px!important;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+#btn-filter:hover {
+  background-color: #000!important; 
+  transform: scale(1.1); 
+}
+
+#reset-filter:hover {
+  color: white;
+  background-color: #000;
+  transform: scale(1.1); 
 }
 
 

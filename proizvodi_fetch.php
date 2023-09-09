@@ -1,4 +1,5 @@
 <?php
+    
     foreach ($products as $product) {
         $id = $product['id'];
         $marka = $product['marka'];
@@ -15,7 +16,7 @@
                 <div class="product-card">
                     <div class="product-card__image">
                         <div class="image image--type--product">
-                            <a href="product-full.html" class="image__body">
+                            <a href="product-full.php?id=$id" class="image__body">
                                 <img class="image__tag" src="http://171.22.22.137/data/slike/$slika1" alt="$proizvod">
                             </a>
                         </div>
@@ -54,7 +55,7 @@
                             </a>
                         </div>
                         <div class="input-group">
-                            <a class="btn btn-creative btn-warning w-100 poziv-scale" onclick="link_tel('tel:%2B38763044884', '693173')" style="margin-top:10px; color: white; border-radius: 5px;">
+                            <a class="btn btn-creative btn-warning w-100 poziv-scale" onclick="link_tel('tel:%2B38763044884', '693173')" style="margin-top:10px; color: white; border-radius: 5px; background-color: #fbaa00;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headset" viewBox="0 0 16 16">
                                 <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/>
                             </svg>
