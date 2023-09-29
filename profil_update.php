@@ -23,7 +23,7 @@ if (isset($_SESSION['user_id'])) {
 
     if (mysqli_stmt_execute($stmt)) {
         $_SESSION['success_message'] = "Uspješno ste uredili profil";
-        header("Location: uredi_profil.php");
+        header("Location: profil_uredi.php");
         exit();
     } else {
         die("Greška prilikom izvršavanja SQL upita: " . mysqli_error($conn));

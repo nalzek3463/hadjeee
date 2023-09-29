@@ -5,7 +5,7 @@ include("db_conn.php");
 $id = $_GET['id'];
 
 //write query 
-$sql = "SELECT id, artikal, marka, tip, kb, kw, ccm, slika1, slika2, slika3 FROM dijelovi1 WHERE id= $id";
+$sql = "SELECT * FROM dijelovi2 WHERE id= $id";
 
 //make query & get result
 $result = mysqli_query($conn, $sql);
@@ -22,15 +22,16 @@ mysqli_close($conn);
 
 foreach ($artikals as $artikal) {
     $id = $artikal['id'];
-    $marka = $artikal['marka'];
-    $tip = $artikal['tip'];
-    $proizvod = $artikal['artikal'];
-    $kataloskibroj = $artikal['kb'];
+    $marka = $artikal['marka1'];
+    $tip = $artikal['tip1'];
+    $proizvod = $artikal['dio'];
+    $kataloskibroj = $artikal['katbroj'];
     $slika1 = $artikal['slika1'];
     $slika2 = $artikal['slika2'];
     $slika3 = $artikal['slika3'];
     $kw = $artikal['kw'];
     $ccm = $artikal['ccm'];
+    $gorivo = $artikal['gorivo'];
 
     echo <<<HTML
 
@@ -82,21 +83,21 @@ foreach ($artikals as $artikal) {
                                      </button>
                                      <div class="owl-carousel">
                                       
-                                         <a class="image image--type--product" href="http://171.22.22.137/data/slike/$slika1" target="_blank" data-width="" data-height="">
+                                         <a class="image image--type--product" href="$slika1" target="_blank" data-width="" data-height="">
                                              <div class="image__body">
-                                                 <img class="image__tag" src="http://171.22.22.137/data/slike/$slika1" alt="$proizvod">
+                                                 <img class="image__tag" src="$slika1" alt="$proizvod">
                                              </div>
                                          </a>
                                       
-                                         <a class="image image--type--product" href="http://171.22.22.137/data/slike/$slika2" target="_blank" data-width="" data-height="">
+                                         <a class="image image--type--product" href="$slika2" target="_blank" data-width="" data-height="">
                                              <div class="image__body">
-                                                 <img class="image__tag" src="http://171.22.22.137/data/slike/$slika2" alt="$proizvod">
+                                                 <img class="image__tag" src="$slika2" alt="$proizvod">
                                              </div>
                                          </a>
                                        
-                                         <a class="image image--type--product" href="http://171.22.22.137/data/slike/$slika3" target="_blank" data-width="" data-height="">
+                                         <a class="image image--type--product" href="$slika3" target="_blank" data-width="" data-height="">
                                              <div class="image__body">
-                                                 <img class="image__tag" src="http://171.22.22.137/data/slike/$slika3" alt="$proizvod">
+                                                 <img class="image__tag" src="$slika3" alt="$proizvod">
                                              </div>
                                          </a>
                                      </div>
@@ -105,17 +106,17 @@ foreach ($artikals as $artikal) {
                                      <div class="owl-carousel">
                                          <div class="product-gallery__thumbnails-item image image--type--product">
                                              <div class="image__body">
-                                                 <img class="image__tag" src="http://171.22.22.137/data/slike/$slika1" alt="$proizvod">
+                                                 <img class="image__tag" src="$slika1" alt="$proizvod">
                                              </div>
                                          </div>
                                          <div class="product-gallery__thumbnails-item image image--type--product">
                                              <div class="image__body">
-                                                 <img class="image__tag" src="http://171.22.22.137/data/slike/$slika2" alt="$proizvod">
+                                                 <img class="image__tag" src="$slika2" alt="$proizvod">
                                              </div>
                                          </div>
                                          <div class="product-gallery__thumbnails-item image image--type--product">
                                              <div class="image__body">
-                                                 <img class="image__tag" src="http://171.22.22.137/data/slike/$slika3" alt="$proizvod">
+                                                 <img class="image__tag" src="$slika3" alt="$proizvod">
                                              </div>
                                          </div>
                                      </div>

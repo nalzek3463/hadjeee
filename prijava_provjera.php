@@ -25,7 +25,7 @@ if (isset($_SESSION['user_id'])) {
         <div class="indicator__content">
             <div class="account-menu">
                 <div class="account-menu__divider"></div>
-                <a href="" class="account-menu__user">
+                <a href="profil.php" class="account-menu__user">
                     <div class="account-menu__user-avatar">
                         <img src="/AutoTarget/images/icon/avatar_muski.png" alt="Avatar">
                     </div>
@@ -39,7 +39,6 @@ if (isset($_SESSION['user_id'])) {
                     <li><a href="profil.php">Profil</a></li>
                     <li><a href="account-dashboard.html">Garaža</a></li>
                     <li><a href="uredi_profil.php">Uredite Profil</a></li>
-                    <li><a href="account-orders.html">Historija transakcija</a></li>
                 </ul>
                 <div class="account-menu__divider"></div>
                 <ul class="account-menu__links">
@@ -64,7 +63,7 @@ if (isset($_SESSION['user_id'])) {
         </a>
         <div class="indicator__content">
             <div class="account-menu">
-                <form class="account-menu__form" method="post" action="login.php">
+                <form class="account-menu__form" method="post" action="prijava.php">
                     <div class="account-menu__form-title">
                         Prijavite se
                     </div>

@@ -20,9 +20,6 @@
                                     <li class="account-nav__item ">
                                         <a href="account-garage.html">Garaža</a>
                                     </li>
-                                    <li class="account-nav__item ">
-                                        <a href="account-orders.html">Historija transakcija</a>
-                                    </li>
                                     <li class="account-nav__divider" role="presentation"></li>
                                     <li class="account-nav__item ">
                                         <a href="odjava.php">Odjava</a>
@@ -39,7 +36,7 @@
                                     <div class="card-body card-body--padding--2">
                                         <div class="row no-gutters">
                                                 <div class="col-6 col-lg-7 col-xl-6 w-75 p-3">
-                                                <form action="update_profil.php" method="post">
+                                                <form action="profil_update.php" method="post">
                                                     <div class="form-group">
                                                         <label for="profile-first-name">Ime</label>
                                                         <input type="text" class="form-control" id="profile-first-name" placeholder="Upišite Ime" name="Ime">

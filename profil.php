@@ -30,13 +30,10 @@ if (isset($_SESSION['user_id'])) {
                                         <a href="profil.php">Profil</a>
                                     </li>
                                     <li class="account-nav__item">
-                                        <a href="uredi_profil.php">Uredi Profil</a>
+                                        <a href="profil_uredi.php">Uredi Profil</a>
                                     </li>
                                     <li class="account-nav__item ">
                                         <a href="account-garage.html">Garaža</a>
-                                    </li>
-                                    <li class="account-nav__item ">
-                                        <a href="account-orders.html">Historija transakcija</a>
                                     </li>
                                     <li class="account-nav__divider" role="presentation"></li>
                                     <li class="account-nav__item ">
@@ -55,7 +52,7 @@ if (isset($_SESSION['user_id'])) {
                                         <div class="profile-card__name">$ime $prezime</div>
                                         <div class="profile-card__email">$email</div>
                                         <div class="profile-card__edit">
-                                            <a href="uredi_profil.php" class="btn btn-secondary btn-sm">Uredi Profil</a>
+                                            <a href="profil_uredi.php" class="btn btn-secondary btn-sm">Uredi Profil</a>
                                         </div>
                                     </div>
                                 </div>
@@ -73,46 +70,6 @@ if (isset($_SESSION['user_id'])) {
                                         <div class="address-card__row">
                                             <div class="address-card__row-title">Email Adresa</div>
                                             <div class="address-card__row-content">$email</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dashboard__orders card">
-                                    <div class="card-header">
-                                        <h5>Historija transakcija</h5>
-                                    </div>
-                                    <div class="card-divider"></div>
-                                    <div class="card-table">
-                                        <div class="table-responsive-sm">
-                                            <table>
-                                                <thead>
-                                                    <tr>
-                                                        <th>RB</th>
-                                                        <th>Datum</th>
-                                                        <th>Status</th>
-                                                        <th>Ukupno</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td><a href="account-order-details.html">#8132</a></td>
-                                                        <td>02 April, 2019</td>
-                                                        <td>Pending</td>
-                                                        <td>$2,719.00 for 5 item(s)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a href="account-order-details.html">#7592</a></td>
-                                                        <td>28 March, 2019</td>
-                                                        <td>Pending</td>
-                                                        <td>$374.00 for 3 item(s)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a href="account-order-details.html">#7192</a></td>
-                                                        <td>15 March, 2019</td>
-                                                        <td>Shipped</td>
-                                                        <td>$791.00 for 4 item(s)</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
                                         </div>
                                     </div>
                                 </div>

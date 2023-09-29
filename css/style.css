@@ -303,6 +303,7 @@ h6 {
   .document__content {
     padding: 28px;
   }
+  
 }
 
 @media (max-width: 575.98px) {
@@ -958,7 +959,7 @@ h6 {
 .btn:not(.btn-icon) {
   font-size: 16px;
   line-height: 19px;
-  padding: calc(17px / 2) 16px;
+  /*padding: calc(17px / 2) 16px;*/
 }
 
 .btn.btn-icon {
@@ -7094,12 +7095,8 @@ select.form-control::-ms-expand {
   overflow: hidden;
   padding-top: 24px;
   padding-bottom: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   background: #333;
 }
 
@@ -7130,7 +7127,9 @@ select.form-control::-ms-expand {
   background-size: cover;
   background-position: center center;
   z-index: 1;
-  opacity: .22;
+  /* Dodajte ovu liniju kako bi se slika smanjivala proporcionalno */
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 
 .block-finder__body {
@@ -7262,7 +7261,7 @@ select.form-control::-ms-expand {
 
 .block-finder__form-control--select .select2-container--disabled .select2-selection--single {
   background-color: #fff;
-  opacity: .65;
+  opacity: .85;
 }
 
 .block-finder__form-control--select .select2-container--disabled .select2-selection__rendered {
@@ -7308,6 +7307,7 @@ select.form-control::-ms-expand {
 @media (max-width: 1199.98px) {
   .block-finder {
     padding-bottom: 36px;
+    
   }
   .block-finder__subtitle {
     margin-bottom: 48px;
@@ -7332,9 +7332,6 @@ select.form-control::-ms-expand {
     width: 260px;
     -ms-flex-preferred-size: 260px;
         flex-basis: 260px;
-  }
-  .block-finder__form-control--button {
-    margin-top: 35px;
   }
 }
 
@@ -7370,8 +7367,12 @@ select.form-control::-ms-expand {
   .block-finder__form-control--select .select2-selection--single {
     height: 40px;
   }
-  .block-finder__form-control--button {
-    margin-top: 35px;
+  .block-finder {
+    height: auto; /* Postavljamo visinu na auto za manje ekrane */
+    padding: 40px 0 48px; /* Prilagodite potrebnoj margini za manje ekrane */
+  }
+  .block-finder__image {
+    background-image: none!important;
   }
 }
 
@@ -8699,7 +8700,7 @@ select.form-control::-ms-expand {
 .block-sale__header-decor .decor__start,
 .block-sale__header-decor .decor__end,
 .block-sale__header-decor .decor__center {
-  background: #fafafa;
+  background: #f3f3f3;
 }
 
 .block-sale__header-decor .decor__start,
@@ -8838,7 +8839,7 @@ select.form-control::-ms-expand {
 
 .block-sale__subtitle {
   color: #6c757d;
-  line-height: 1;
+  line-height: 2;
   margin-top: 10px;
 }
 
@@ -8881,7 +8882,7 @@ select.form-control::-ms-expand {
 .block-sale__body-decor .decor__start,
 .block-sale__body-decor .decor__end,
 .block-sale__body-decor .decor__center {
-  background: #fafafa;
+  background: #f3f3f3!important;
 }
 
 .block-sale__body-decor .decor__start,
@@ -8896,8 +8897,6 @@ select.form-control::-ms-expand {
   right: 0;
   top: 0;
   bottom: 0;
-  background-size: cover;
-  background-position: center center;
   z-index: -1;
 }
 
@@ -15230,7 +15229,7 @@ select.form-control::-ms-expand {
  background .08s;
   background-color: #fff;
   color: #fbaa00;
-  border-top-right-radius: 15px!important;
+  border-top-right-radius: 10px!important;
 }
 
 .product-card .product-card__action:hover {
@@ -15530,7 +15529,7 @@ select.form-control::-ms-expand {
 .product-card--layout--grid:after {
   display: block;
   position: static;
-  content: '';
+  /*content: '';*/
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -20847,6 +20846,8 @@ select.form-control::-ms-expand {
 .wp-scale:hover {
   transform: scale(1.1); /* You can adjust the scale factor as desired */
   transition: transform 0.3s ease; /* Adjust the transition duration and timing function as desired */
+  background-color: #333!important; /* Tamno siva boja */
+  border-color: #333!important; /* Tamno siva boja */
 }
 
 .viber-scale {
@@ -20858,11 +20859,15 @@ select.form-control::-ms-expand {
 .viber-scale:hover {
   transform: scale(1.1); /* You can adjust the scale factor as desired */
   transition: transform 0.3s ease; /* Adjust the transition duration and timing function as desired */
+  background-color: #333!important; /* Tamno siva boja */
+  border-color: #333!important; /* Tamno siva boja */
 }
 
 .poziv-scale:hover {
   transform: scale(1.1); /* You can adjust the scale factor as desired */
   transition: transform 0.3s ease; /* Adjust the transition duration and timing function as desired */
+  background-color: #333!important; /* Tamno siva boja */
+  border-color: #333!important; /* Tamno siva boja */
 }
 
 .footer-navigation {
@@ -20923,7 +20928,24 @@ select.form-control::-ms-expand {
   transform: scale(1.1); 
 }
 
+@keyframes imageChange {
+  0% {
+      filter: grayscale(0%); /* Početna boja slike je u boji (0% sive) */
+      transform: scale(1); /* Početno skaliranje 1x */
+  }
+  50% {
+      filter: grayscale(100%); /* Srednja tačka animacije - slika postaje crno-bela (100% sive) */
+      transform: scale(1.2); /* Skaliranje na 1.2x */
+  }
+  100% {
+      filter: grayscale(100%); /* Krajnja boja slike je crno-bela (100% sive) */
+      transform: scale(1); /* Povratno skaliranje na početnu veličinu */
+  }
+}
 
+.img-visina {
+  height: 100%!important;
+}
 
 
 

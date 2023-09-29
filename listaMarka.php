@@ -11,7 +11,7 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $idMarke = $row['id'];
         $markaVozila = $row['naziv'];
-        echo "<option value='$idMarke-$markaVozila'>$markaVozila</option>";
+        echo "<option value='$idMarke|$markaVozila'>$markaVozila</option>";
     }
 
 }
