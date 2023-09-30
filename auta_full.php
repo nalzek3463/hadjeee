@@ -20,6 +20,7 @@ mysqli_free_result($result);
 mysqli_close($conn);
 
 
+
 foreach ($cars as $car) {
     $id_auta = $car['id_auta'];
     $marka = $car['marka'];
@@ -36,16 +37,18 @@ foreach ($cars as $car) {
     $godina = $car['godina'];
     $eu_standard = $car['eu_standard'];
     $boja = $car['boja'];
-    $slika1 = $car['slika1'];
-    $slika2 = $car['slika2'];
-    $slika3 = $car['slika3'];
-    $slika4 = $car['slika4'];
-    $slika5 = $car['slika5'];
-    $slika6 = $car['slika6'];
-    $slika7 = $car['slika7'];
-    $slika8 = $car['slika8'];
-    $slika9 = $car['slika9'];
-    $slika10 = $car['slika10'];
+    $slike = array(
+        $car['slika1'],
+        $car['slika2'],
+        $car['slika3'],
+        $car['slika4'],
+        $car['slika5'],
+        $car['slika6'],
+        $car['slika7'],
+        $car['slika8'],
+        $car['slika9'],
+        $car['slika10'],
+    );
 
     echo <<<HTML
 
@@ -69,113 +72,38 @@ foreach ($cars as $car) {
                                          </svg>
                                      </button>
                                      <div class="owl-carousel">
-                                      
-                                         <a class="image image--type--product" href="$slika1" target="_blank" data-width="" data-height="">
-                                             <div class="image__body">
-                                                 <img class="image__tag img-visina img-visina" src="$slika1" alt="$marka $tip">
-                                             </div>
-                                         </a>
-                                      
-                                         <a class="image image--type--product " href="$slika2" target="_blank" data-width="" data-height="">
-                                             <div class="image__body">
-                                                 <img class="image__tag img-visina" src="$slika2" alt="$marka $tip">
-                                             </div>
-                                         </a>
-                                       
-                                         <a class="image image--type--product" href="$slika3" target="_blank" data-width="" data-height="">
-                                             <div class="image__body">
-                                                 <img class="image__tag img-visina" src="$slika3" alt="$marka $tip">
-                                             </div>
-                                         </a>
-                                         <a class="image image--type--product" href="$slika4" target="_blank" data-width="" data-height="">
-                                             <div class="image__body">
-                                                 <img class="image__tag img-visina" src="$slika4" alt="$marka $tip">
-                                             </div>
-                                         </a>
-                                         <a class="image image--type--product" href="$slika5" target="_blank" data-width="" data-height="">
-                                             <div class="image__body">
-                                                 <img class="image__tag img-visina" src="$slika5" alt="$marka $tip">
-                                             </div>
-                                         </a>
-                                         <a class="image image--type--product" href="$slika6" target="_blank" data-width="" data-height="">
-                                             <div class="image__body">
-                                                 <img class="image__tag img-visina" src="$slika6" alt="$marka $tip">
-                                             </div>
-                                         </a>
-                                         <a class="image image--type--product" href="$slika7" target="_blank" data-width="" data-height="">
-                                             <div class="image__body">
-                                                 <img class="image__tag img-visina" src="$slika7" alt="$marka $tip">
-                                             </div>
-                                         </a>
-                                         <a class="image image--type--product" href="$slika8" target="_blank" data-width="" data-height="">
-                                             <div class="image__body">
-                                                 <img class="image__tag img-visina" src="$slika7" alt="$marka $tip">
-                                             </div>
-                                         </a>
-                                         <a class="image image--type--product" href="$slika9" target="_blank" data-width="" data-height="">
-                                             <div class="image__body">
-                                                 <img class="image__tag img-visina" src="$slika7" alt="$marka $tip">
-                                             </div>
-                                         </a>
-                                         <a class="image image--type--product" href="$slika10" target="_blank" data-width="" data-height="">
-                                             <div class="image__body">
-                                                 <img class="image__tag img-visina" src="$slika7" alt="$marka $tip">
-                                             </div>
-                                         </a>
+HTML;
+    foreach ($slike as $slika) {
+        if (!empty($slika)) {
+            echo <<<HTML
+                                                    <a class="image image--type--product" href="$slika" target="_blank" data-width="" data-height="">
+                                                        <div class="image__body">
+                                                            <img class="image__tag" src="$slika" alt="$marka $tip">
+                                                        </div>
+                                                    </a>
+HTML;
+        }
+    }
+    echo <<<HTML
+
                                      </div>
                                  </div>
                                  <div class="product-gallery__thumbnails">
                                      <div class="owl-carousel">
-                                         <div class="product-gallery__thumbnails-item image image--type--product">
-                                             <div class="image__body">
-                                                 <img class="image__tag img-visina" src="$slika1" alt="$marka $tip">
-                                             </div>
-                                         </div>
-                                         <div class="product-gallery__thumbnails-item image image--type--product">
-                                             <div class="image__body">
-                                                 <img class="image__tag img-visina" src="$slika2" alt="$marka $tip">
-                                             </div>
-                                         </div>
-                                         <div class="product-gallery__thumbnails-item image image--type--product">
-                                             <div class="image__body">
-                                                 <img class="image__tag img-visina" src="$slika3" alt="$marka $tip">
-                                             </div>
-                                         </div>
-                                         <div class="product-gallery__thumbnails-item image image--type--product">
-                                             <div class="image__body">
-                                                 <img class="image__tag img-visina" src="$slika4" alt="$marka $tip">
-                                             </div>
-                                         </div>
-                                         <div class="product-gallery__thumbnails-item image image--type--product">
-                                             <div class="image__body">
-                                                 <img class="image__tag img-visina" src="$slika5" alt="$marka $tip">
-                                             </div>
-                                         </div>
-                                         <div class="product-gallery__thumbnails-item image image--type--product">
-                                             <div class="image__body">
-                                                 <img class="image__tag img-visina" src="$slika6" alt="$marka $tip">
-                                             </div>
-                                         </div>
-                                         <div class="product-gallery__thumbnails-item image image--type--product">
-                                             <div class="image__body">
-                                                 <img class="image__tag img-visina" src="$slika7" alt="$marka $tip">
-                                             </div>
-                                         </div>
-                                         <div class="product-gallery__thumbnails-item image image--type--product">
-                                             <div class="image__body">
-                                                 <img class="image__tag img-visina" src="$slika8" alt="$marka $tip">
-                                             </div>
-                                         </div>
-                                         <div class="product-gallery__thumbnails-item image image--type--product">
-                                             <div class="image__body">
-                                                 <img class="image__tag img-visina" src="$slika9" alt="$marka $tip">
-                                             </div>
-                                         </div>
-                                         <div class="product-gallery__thumbnails-item image image--type--product">
-                                             <div class="image__body">
-                                                 <img class="image__tag img-visina" src="$slika10" alt="$marka $tip">
-                                             </div>
-                                         </div>
+HTML;
+    foreach ($slike as $slika) {
+        if (!empty($slika)) {
+            echo <<<HTML
+                                                <div class="product-gallery__thumbnails-item image image--type--product">
+                                                    <div class="image__body">
+                                                        <img class="image__tag" src="$slika" alt="$marka $tip">
+                                                    </div>
+                                                </div>
+HTML;
+        }
+    }
+    echo <<<HTML
+                           
                                      </div>
                                  </div>
                              </div>
