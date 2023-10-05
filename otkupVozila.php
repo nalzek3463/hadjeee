@@ -6,7 +6,7 @@
             <section id="center" class="center_home">
                 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
 
-                    <div class="carousel-inner">
+                    <div class="carousel-inner" style=" display: flex; height: 800px;">
                         <div class="carousel-item active">
                             <img src="/AutoTarget/images/banners/otkup.webp" class="d-block w-100" alt="...">
                         </div>

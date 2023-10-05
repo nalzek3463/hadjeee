@@ -18528,7 +18528,7 @@ select.form-control::-ms-expand {
 }
 
 .blog-view__item-sidebar {
-  width: 332px;
+  width: 1000px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -19964,7 +19964,7 @@ select.form-control::-ms-expand {
   background-size: cover;
   background-position: center center;
   z-index: -1;
-  opacity: .22;
+  opacity: .55;
 }
 
 .post-header__body {

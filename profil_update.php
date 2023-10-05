@@ -1,7 +1,7 @@
 <?php
 session_start();
-if (isset($_SESSION['user_id'])) {
-    $user_id = $_SESSION['user_id'];
+if (isset($_SESSION['id'])) {
+    $user_id = $_SESSION['id'];
 
     $ime = $_POST["Ime"];
     $prezime = $_POST["Prezime"];
@@ -12,7 +12,7 @@ if (isset($_SESSION['user_id'])) {
 
     include("db_conn.php");
 
-    $sql = "UPDATE users SET ime=?, prezime=?, email=?, broj_telefona=?, adresa=?, postanski_broj_grad=? WHERE user_id=?";
+    $sql = "UPDATE users SET ime=?, prezime=?, email=?, broj_telefona=?, adresa=?, postanski_broj_grad=? WHERE id=?";
 
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
