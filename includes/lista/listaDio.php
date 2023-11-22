@@ -1,6 +1,7 @@
 
 <?php
-include("db_conn.php");
+
+include("./db_conn.php");
 
 $query = "SELECT artikal FROM filter_nazivi";
 $result = $conn->query($query);

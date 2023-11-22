@@ -1,39 +1,63 @@
-<?php include('header.php');
 
-include("db_conn.php");
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-$id = $_GET['id'];
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Target Auto-Otpad</title>
+    <link rel="icon" type="image/png" href="/AutoTarget/images/logo/kljuc.png">
+    <!-- fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/photoswipe/photoswipe.css">
+    <link rel="stylesheet" href="vendor/photoswipe/default-skin/default-skin.css">
+    <link rel="stylesheet" href="vendor/select2/css/select2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog_style.css">
+    <link rel="stylesheet" href="css/style.header-spaceship-variant-one.css" media="(min-width: 1200px)">
+    <!-- font - fontawesome -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-//write query 
-$sql = "SELECT * FROM dijelovi2 WHERE id= $id";
 
-//make query & get result
-$result = mysqli_query($conn, $sql);
+</head>
 
-// fetch the resulting rows as an array
-$artikals = mysqli_fetch_all($result, MYSQLI_ASSOC);
+<body>
 
-//free result from memory
-mysqli_free_result($result);
+    <?php include('./includes/header.php');
 
-//close connection
-mysqli_close($conn);
+    $id = $_GET['id'];
 
+    $sql = "SELECT * FROM dijelovi2 WHERE id= $id";
+    $result = mysqli_query($conn, $sql);
+    $artikals = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    mysqli_free_result($result);
 
-foreach ($artikals as $artikal) {
-    $id = $artikal['id'];
-    $marka = $artikal['marka1'];
-    $tip = $artikal['tip1'];
-    $proizvod = $artikal['dio'];
-    $kataloskibroj = $artikal['katbroj'];
-    $slika1 = $artikal['slika1'];
-    $slika2 = $artikal['slika2'];
-    $slika3 = $artikal['slika3'];
-    $kw = $artikal['kw'];
-    $ccm = $artikal['ccm'];
-    $gorivo = $artikal['gorivo'];
+    foreach ($artikals as $artikal) {
+        $id = $artikal['id'];
+        $marka = $artikal['marka1'];
+        $tip = $artikal['tip1'];
+        $proizvod = $artikal['dio'];
+        $kataloskibroj = $artikal['katbroj'];
+        $slika1 = $artikal['slika1'];
+        $slika2 = $artikal['slika2'];
+        $slika3 = $artikal['slika3'];
+        $kw = $artikal['kw'];
+        $ccm = $artikal['ccm'];
+        $gorivo = $artikal['gorivo'];
 
-    echo <<<HTML
+        echo <<<HTML
 
 
  <!-- site__body -->
@@ -241,5 +265,10 @@ foreach ($artikals as $artikal) {
  <!-- site__body / end -->
 
  HTML;
-}
-include('footer.php');
+    }
+    include('./includes/footer.php');
+    ?>
+
+</body>
+
+</html>

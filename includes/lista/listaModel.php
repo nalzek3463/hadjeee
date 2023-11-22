@@ -1,5 +1,6 @@
 <?php
-include("db_conn.php");
+include("../../db_conn.php");
+
 
 if (isset($_GET['idMarke'])) {
     $idMarke = $_GET['idMarke'];
@@ -16,6 +17,5 @@ if (isset($_GET['idMarke'])) {
         }
     }
 
-    
 }
 ?>

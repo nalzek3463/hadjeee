@@ -1,10 +1,5 @@
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-include("db_conn.php");
 
 if (isset($_GET['id_auta'])) {
     $carId = intval($_GET['id_auta']);
@@ -25,7 +20,7 @@ if (isset($_GET['id_auta'])) {
         $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
         mysqli_free_result($result);
-        mysqli_close($conn);
+       
 
         foreach ($products as $product) {
             $id = $product['id'];
@@ -52,7 +47,7 @@ if (isset($_GET['id_auta'])) {
                                 </button>
                             </div>
                             <div class="image image--type--product">
-                                <a href="product-full.php?id=$id" target="_blank" class="image__body">
+                                <a href="./full_artikal.php?id=$id" target="_blank" class="image__body">
                                     <img class="image__tag" src="$slika1" alt="$proizvod">
                                 </a>
                             </div>
@@ -60,7 +55,7 @@ if (isset($_GET['id_auta'])) {
                         <div class="product-card__info">
                             <div class="product-card__name">
                                 <div>
-                                    <a href="product-full.php?id=$id">$proizvod</a>
+                                    <a href="./full_artikal.php?id=$id">$proizvod</a>
                                 </div>
                             </div>
                                 <div class="product-card__meta" style="padding-top: 20px;"><span class="product-card__meta-title"><b>ID: $id</b></span></div>

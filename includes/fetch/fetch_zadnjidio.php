@@ -1,5 +1,4 @@
 <?php
-include("db_conn.php");
 
 
 $sql = 'SELECT * FROM dijelovi2 ORDER BY id DESC LIMIT 20';
@@ -7,7 +6,7 @@ $result = mysqli_query($conn, $sql);
 $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 mysqli_free_result($result);
-mysqli_close($conn);
+
 
 foreach ($products as $product) {
     $id = $product['id'];
@@ -35,7 +34,7 @@ foreach ($products as $product) {
                         </button>
                     </div>
                     <div class="image image--type--product">
-                        <a href="product-full.php?id=$id" target="_blank" class="image__body">
+                        <a href="./full_artikal.php?id=$id" target="_blank" class="image__body">
                             <img class="image__tag" src="$slika1" alt="$proizvod">
                         </a>
                     </div>
@@ -43,7 +42,7 @@ foreach ($products as $product) {
                 <div class="product-card__info">
                     <div class="product-card__name">
                         <div>
-                            <a href="product-full.php?id=$id">$proizvod</a>
+                            <a href="./full_artikal.php?id=$id">$proizvod</a>
                         </div>
                     </div>
                         <div class="product-card__meta" style="padding-top: 20px;"><span class="product-card__meta-title"><b>ID: $id</b></span></div>

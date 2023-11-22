@@ -1,13 +1,12 @@
 <?php
 
-include("db_conn.php");
 
 $auta = 'SELECT * FROM auta ORDER BY id DESC';
 $auta1 = mysqli_query($conn, $auta);
 $product_cars = mysqli_fetch_all($auta1, MYSQLI_ASSOC);
 
 mysqli_free_result($auta1);
-mysqli_close($conn);
+
 
 
 foreach ($product_cars as $product_car) {
@@ -48,7 +47,7 @@ echo <<<HTML
                         </button>
                     </div>
                     <div class="image image--type--product">
-                        <a href="auta_full.php?id_auta=$id_auta" class="image__body">
+                        <a href="./full_auto.php?id_auta=$id_auta" class="image__body">
                             <img class="image__tag" src="$slika1" alt="$marka $tip">
                         </a>
                     </div>
@@ -56,7 +55,7 @@ echo <<<HTML
                 <div class="product-card__info">
                     <div class="product-card__name">
                         <div>
-                            <a href="product-full.php?id=$id">$marka $tip</a>
+                            <a href="./full_auto.php?id_auta=$id_auta">$marka $tip</a>
                         </div>
                     </div>
                         <div class="product-card__meta" style="padding-top: 20px;"><span class="product-card__meta-title"><b>ID: $id_auta</b></span></div>

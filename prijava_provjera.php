@@ -10,8 +10,9 @@ if (isset($_SESSION['id'])) {
         $row = mysqli_fetch_assoc($result);
         $username = $row['username'];
         $email = $row['email'];
-
-    echo <<<HTML
+        $user_role = $row['admin'];
+echo <<<HTML
+   
 
         <a href="#" class="indicator__button">
             <span class="indicator__icon">
@@ -39,6 +40,14 @@ if (isset($_SESSION['id'])) {
                     <li><a href="profil.php">Profil</a></li>
                     <li><a href="account-dashboard.html">Garaža</a></li>
                     <li><a href="uredi_profil.php">Uredite Profil</a></li>
+HTML;
+                  
+                    if ($user_role === "1") {
+                        
+                        echo'<li><a href="./blog/admin/dashboard.php">Blog Editor</a></li>';
+
+                    }
+echo <<<HTML
                 </ul>
                 <div class="account-menu__divider"></div>
                 <ul class="account-menu__links">
@@ -47,7 +56,7 @@ if (isset($_SESSION['id'])) {
                 <div class="account-menu__divider"></div>
             </div>
         </div>
-    HTML;
+HTML;
     }  
 } else {
      echo <<<HTML

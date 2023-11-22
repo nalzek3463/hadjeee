@@ -1,56 +1,81 @@
-<?php include('header.php');
 
-include("db_conn.php");
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-$id_auta = $_GET['id_auta'];
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Target Auto-Otpad</title>
+    <link rel="icon" type="image/png" href="/AutoTarget/images/logo/kljuc.png">
+    <!-- fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./vendor/owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./vendor/photoswipe/photoswipe.css">
+    <link rel="stylesheet" href="./vendor/photoswipe/default-skin/default-skin.css">
+    <link rel="stylesheet" href="./vendor/select2/css/select2.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/blog_style.css">
+    <link rel="stylesheet" href="./css/style.header-spaceship-variant-one.css" media="(min-width: 1200px)">
+    <!-- font - fontawesome -->
+    <link rel="stylesheet" href="./vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-//write query 
-$sql = "SELECT * FROM auta WHERE id_auta= $id_auta";
 
-//make query & get result
-$result = mysqli_query($conn, $sql);
+</head>
 
-// fetch the resulting rows as an array
-$cars = mysqli_fetch_all($result, MYSQLI_ASSOC);
+<body>
 
-//free result from memory
-mysqli_free_result($result);
+    <?php
+    include("./includes/header.php");
 
-//close connection
-mysqli_close($conn);
+    $id_auta = $_GET['id_auta'];
+
+    $sql = "SELECT * FROM auta WHERE id_auta= $id_auta";
+    $result = mysqli_query($conn, $sql);
+    $cars = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    mysqli_free_result($result);
 
 
+    foreach ($cars as $car) {
+        $id_auta = $car['id_auta'];
+        $marka = $car['marka'];
+        $tip = $car['tip'];
+        $model = $car['model'];
+        $kod_motora = $car['kod_motora'];
+        $zapremina = $car['zapremina'];
+        $snaga = $car['snaga'];
+        $gorivo = $car['gorivo'];
+        $vrsta_mjenjaca = $car['vrsta_mjenjaca'];
+        $kod_mjenjaca = $car['kod_mjenjaca'];
+        $brzina = $car['brzina'];
+        $pogon = $car['pogon'];
+        $godina = $car['godina'];
+        $eu_standard = $car['eu_standard'];
+        $boja = $car['boja'];
+        $slike = array(
+            $car['slika1'],
+            $car['slika2'],
+            $car['slika3'],
+            $car['slika4'],
+            $car['slika5'],
+            $car['slika6'],
+            $car['slika7'],
+            $car['slika8'],
+            $car['slika9'],
+            $car['slika10'],
+        );
 
-foreach ($cars as $car) {
-    $id_auta = $car['id_auta'];
-    $marka = $car['marka'];
-    $tip = $car['tip'];
-    $model = $car['model'];
-    $kod_motora = $car['kod_motora'];
-    $zapremina = $car['zapremina'];
-    $snaga = $car['snaga'];
-    $gorivo = $car['gorivo'];
-    $vrsta_mjenjaca = $car['vrsta_mjenjaca'];
-    $kod_mjenjaca = $car['kod_mjenjaca'];
-    $brzina = $car['brzina'];
-    $pogon = $car['pogon'];
-    $godina = $car['godina'];
-    $eu_standard = $car['eu_standard'];
-    $boja = $car['boja'];
-    $slike = array(
-        $car['slika1'],
-        $car['slika2'],
-        $car['slika3'],
-        $car['slika4'],
-        $car['slika5'],
-        $car['slika6'],
-        $car['slika7'],
-        $car['slika8'],
-        $car['slika9'],
-        $car['slika10'],
-    );
-
-    echo <<<HTML
+        echo <<<HTML
 
 
  <!-- site__body -->
@@ -73,36 +98,36 @@ foreach ($cars as $car) {
                                      </button>
                                      <div class="owl-carousel">
 HTML;
-    foreach ($slike as $slika) {
-        if (!empty($slika)) {
-            echo <<<HTML
+        foreach ($slike as $slika) {
+            if (!empty($slika)) {
+                echo <<<HTML
                                                     <a class="image image--type--product" href="$slika" target="_blank" data-width="" data-height="">
                                                         <div class="image__body">
                                                             <img class="image__tag" src="$slika" alt="$marka $tip">
                                                         </div>
                                                     </a>
 HTML;
+            }
         }
-    }
-    echo <<<HTML
+        echo <<<HTML
 
                                      </div>
                                  </div>
                                  <div class="product-gallery__thumbnails">
                                      <div class="owl-carousel">
 HTML;
-    foreach ($slike as $slika) {
-        if (!empty($slika)) {
-            echo <<<HTML
+        foreach ($slike as $slika) {
+            if (!empty($slika)) {
+                echo <<<HTML
                                                 <div class="product-gallery__thumbnails-item image image--type--product">
                                                     <div class="image__body">
                                                         <img class="image__tag" src="$slika" alt="$marka $tip">
                                                     </div>
                                                 </div>
 HTML;
+            }
         }
-    }
-    echo <<<HTML
+        echo <<<HTML
                            
                                      </div>
                                  </div>
@@ -272,8 +297,8 @@ HTML;
                                  <div class="block-products-carousel__carousel-loader"></div>
                                  <div class="owl-carousel">
  HTML;
-    include("fetch_dio_po_autu.php");
-    echo <<<HTML
+        include("./includes/fetch/fetch_dio_po_autu.php");
+        echo <<<HTML
                                  </div>
                              </div>
                          </div>
@@ -287,5 +312,9 @@ HTML;
  <!-- site__body / end -->
 
  HTML;
-}
-include('footer.php');
+    }
+    include('./includes/footer.php'); ?>
+
+</body>
+
+</html>

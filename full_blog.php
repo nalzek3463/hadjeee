@@ -1,25 +1,62 @@
-<?php 
-include("db_conn.php");
-include("header.php");
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-$id = $_GET['id'];
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Target Auto-Otpad</title>
+    <link rel="icon" type="image/png" href="/AutoTarget/images/logo/kljuc.png">
+    <!-- fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/photoswipe/photoswipe.css">
+    <link rel="stylesheet" href="vendor/photoswipe/default-skin/default-skin.css">
+    <link rel="stylesheet" href="vendor/select2/css/select2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog_style.css">
+    <link rel="stylesheet" href="css/style.header-spaceship-variant-one.css" media="(min-width: 1200px)">
+    <!-- font - fontawesome -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-$sql = "SELECT * FROM posts WHERE id=$id";
-$result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
+</head>
 
-        $id = $row['id'];
-        $user_id = $row['user_id'];
-        $topic_id = $row['topic_id'];
-        $title = $row['title'];
-        $image = $row['image'];
-        $body = $row['body'];
-        $created_at = $row['created_at'];
-        $formatiranDatum = date('d.m.Y', strtotime($created_at));
+<body>
 
-echo <<<HTML
+
+    <?php
+
+    include("./includes/header.php");
+
+    $id = $_GET['id'];
+
+    $sql = "SELECT * FROM posts WHERE id=$id";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+
+            $id = $row['id'];
+            $user_id = $row['user_id'];
+            $topic_id = $row['topic_id'];
+            $title = $row['title'];
+            $image = $row['image'];
+            $body = $row['body'];
+            $created_at = $row['created_at'];
+            $formatiranDatum = date('d.m.Y', strtotime($created_at));
+
+            echo <<<HTML
 
         <!-- site__body -->
         <div class="site__body">
@@ -112,8 +149,8 @@ echo <<<HTML
                                 <div class="post__body typography">
                                    <p> 
 HTML;
-                                        echo html_entity_decode($body);
-echo <<<HTML
+            echo html_entity_decode($body);
+            echo <<<HTML
                                     </p>
                                     <figure>
                                         <a href="">
@@ -130,8 +167,12 @@ echo <<<HTML
         </div>
         <!-- site__body / end -->
 HTML;
+        }
     }
-}
 
-include("footer.php");
-?>
+    include("./includes/footer.php");
+    ?>
+
+</body>
+
+</html>
