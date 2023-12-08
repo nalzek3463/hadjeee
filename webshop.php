@@ -146,60 +146,60 @@ include("./includes/filterPaginacijaQuery.php")
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        // Definicija funkcije uraditip u globalnom opsegu
-        function uraditip(marka, elementId) {
-            idMarke = marka.split('|')[0];
-            // Sada možete napraviti AJAX poziv kako biste dohvatili modele vozila za tu marku
-            // Primjer:
-            $.ajax({
-                url: './includes/lista/listaModel.php', // Stvorite PHP skriptu koja će dohvatiti modele za idMarke
-                type: 'GET',
-                data: {
-                    idMarke: idMarke
-                },
-                success: function(response) {
-                    // Ovdje možete ažurirati opcije za odabir modela u HTML-u
-                    $("#" + elementId).html(response);
-                },
-                error: function(xhr, status, error) {
-                    console.error(xhr.responseText);
-                }
-            });
-        }
+    // Definicija funkcije uraditip u globalnom opsegu
+    function uraditip(marka, elementId) {
+        var idMarke = marka.split('|')[0];
+        
+        // Sada možete napraviti AJAX poziv kako biste dohvatili modele vozila za tu marku
+        // Primjer:
+        $.ajax({
+            url: './includes/lista/listaModel.php', // Stvorite PHP skriptu koja će dohvatiti modele za idMarke
+            type: 'GET',
+            data: {
+                idMarke: idMarke
+            },
+            success: function(response) {
+                // Ovdje možete ažurirati opcije za odabir modela u HTML-u
+                $("#" + elementId).html(response);
+            },
+            error: function(xhr, status, error) {
+                console.error(xhr.responseText);
+            }
+        });
+    }
 
-        $(document).ready(function() {
-            // Handler za submit forme za filtriranje
-            $("#filter-form").submit(function(event) {
-                event.preventDefault();
-                var kataloskiBroj = $("#kataloski_broj").val();
-                var nazivArtikla = $("#naziv_artikla").val();
-                var marka = $("#marka").val();
-                var model = $("#tip").val();
+    $(document).ready(function() {
 
-                // Dodajte kodiraniModel u URL za pretragu
-                window.location.href = "webshop.php?kataloski_broj=" + kataloskiBroj + "&naziv_artikla=" + nazivArtikla + "&marka=" + marka + "&tip=" + model;
+        
+        // Handler za submit forme za filtriranje
+      /*  $("#filter-form").submit(function(event) {
+            event.preventDefault();
 
+            var kataloskiBroj = $("#kataloski_broj").val();
+            var nazivArtikla = $("#naziv_artikla").val();
+            var marka = $("#marka").val();
+            var model = $("#tip").val();
 
-            });
+            // Dodajte kodiraniModel u URL za pretragu
+            window.location.href = "webshop.php?kataloski_broj=" + kataloskiBroj + "&naziv_artikla=" + nazivArtikla + "&marka=" + marka + "&tip=" + model;
+        }); */
 
-            // Handler za resetiranje filtera
-            $("#reset-filter").click(function() {
-                // Preusmjerite na početnu stranicu bez filtera
+        // Handler za resetiranje filtera
+        $("#reset-filter").click(function() {
+            // Preusmjerite na početnu stranicu bez filtera
+            window.location.href = "webshop.php";
+        });
+
+        // Dodajte event listener za prijevoz tipke F5 (keyCode 116)
+        $(document).keydown(function(e) {
+            if (e.keyCode == 116) {
+                // Osvježite stranicu bez filtera
                 window.location.href = "webshop.php";
-            });
+            }
         });
+    });
+</script>
 
-        // Čekajte da se dokument učita
-        $(document).ready(function() {
-            // Dodajte event listener za prijevoz tipke F5 (keyCode 116)
-            $(document).keydown(function(e) {
-                if (e.keyCode == 116) {
-                    // Osvježite stranicu bez filtera
-                    window.location.href = "webshop.php";
-                }
-            });
-        });
-    </script>
 </body>
 
 <?php include("./includes/footer.php"); ?>

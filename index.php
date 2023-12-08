@@ -177,7 +177,7 @@
                                     <div class="decor__center"></div>
                                 </div>s
                             </div>
-                            <div class="block-sale__image" style="background-image: url('images/sale-1903x640.jpg');"></div>
+                            <div class="block-sale__image" style="background-image: url('images/backgroundtest.png');"></div>
                             <div class="container">
                                 <div class="block-sale__carousel">
                                     <div class="owl-carousel">
@@ -192,28 +192,50 @@
                 <div class="block-banners block">
                     <div class="container">
                         <div class="block-banners__list">
-                            <a href="" class="block-banners__item block-banners__item--style--one">
-                                <span class="block-banners__item-image"><img src="images/banners/banner1.jpg" alt=""></span>
-                                <span class="block-banners__item-image block-banners__item-image--blur"><img src="images/banners/banner1.jpg" alt=""></span>
-                                <span class="block-banners__item-title">Motor Oils</span>
+                            <a href="https://www.instagram.com/auto.target/" class="block-banners__item block-banners__item--style--one">
+                                <span class="block-banners__item-image"><img src="images/banners/instagrambanner.png" alt=""></span>
+                                <span class="block-banners__item-image block-banners__item-image--blur"><img src="images/banners/instagrambanner.png" alt=""></span>
+                                <span class="block-banners__item-title">Instagram</span>
                                 <span class="block-banners__item-details">
-                                    Synthetic motor oil with free shipping<br>
-                                    Friction free life guaranteed
+                                    Spremni ste za vožnju?<br>
+                                    Pratite nas u stopu na Instagramu!
                                 </span>
                                 <span class="block-banners__item-button btn btn-primary btn-sm">
-                                    Shop Now
+                                    Pristup
                                 </span>
                             </a>
-                            <a href="" class="block-banners__item block-banners__item--style--two">
-                                <span class="block-banners__item-image"><img src="images/banners/banner2.jpg" alt=""></span>
-                                <span class="block-banners__item-image block-banners__item-image--blur"><img src="images/banners/banner2.jpg" alt=""></span>
-                                <span class="block-banners__item-title">Save up to $40</span>
+                            <a href="https://www.facebook.com/autotarget.ba" class="block-banners__item block-banners__item--style--one">
+                                <span class="block-banners__item-image"><img src="images/banners/facebookbanner.png" alt=""></span>
+                                <span class="block-banners__item-image block-banners__item-image--blur"><img src="images/banners/facebookbanner.png" alt=""></span>
+                                <span class="block-banners__item-title">Facebook</span>
                                 <span class="block-banners__item-details">
-                                    Luxurious interior part for real aesthetes<br>
-                                    Leather, fabric, ivory and more.
+                                    Istražite više s nama.<br>
+                                    Pridružite nam se na Facebooku.
                                 </span>
                                 <span class="block-banners__item-button btn btn-primary btn-sm">
-                                    Shop Now
+                                    Pristup
+                                </span>
+                            </a>
+                            <a href="https://olx.ba/shops/AutoTarget/aktivni" class="block-banners__item block-banners__item--style--one">
+                                <span class="block-banners__item-image"><img src="images/banners/olxbanner.png" alt=""></span>
+                                <span class="block-banners__item-image block-banners__item-image--blur"><img src="images/banners/olxbanner.png" alt=""></span>
+                                <span class="block-banners__item-title">OLX</span>
+                                <span class="block-banners__item-details">
+                                    Posjetite našu prodavnicu na OLX.ba<br>
+                                </span>
+                                <span class="block-banners__item-button btn btn-primary btn-sm">
+                                    Pristup
+                                </span>
+                            </a>
+                            <a href="https://www.njuskalo.hr/moje-njuskalo/poslovni/moji-oglasi/aktivni-oglasi" class="block-banners__item block-banners__item--style--one">
+                                <span class="block-banners__item-image"><img src="images/banners/njuskalobanner.png" alt=""></span>
+                                <span class="block-banners__item-image block-banners__item-image--blur"><img src="images/banners/njuskalobanner.png" alt=""></span>
+                                <span class="block-banners__item-title">Njuškalo</span>
+                                <span class="block-banners__item-details">
+                                    Posjetite našu prodavnicu na NJUSKALO.hr<br>  
+                                </span>
+                                <span class="block-banners__item-button btn btn-primary btn-sm">
+                                    Pristup
                                 </span>
                             </a>
                         </div>

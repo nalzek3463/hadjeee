@@ -24,9 +24,6 @@
 
                             <div class="col-12 col-xl-4">
                                 <div class="site-footer__widget footer-contacts">
-                                    <div class="footer-contacts__text">
-                                     <h3 style="color: white; text-align: center;">Kontakt:</h3>
-                                    </div>
                                     <address class="footer-contacts__contacts">
                                         <dl>
                                             <dt>Kontakt broj BiH:</dt>
@@ -58,18 +55,7 @@
                             
                             <div class="col-12 col-md-6 col-xl-4">
                                 <div class="site-footer__widget footer-newsletter">
-                                    <img src="/AutoTarget/images/logo/qrkod.png" alt="QR kod" style="width: 400px;">
-                                    <div class="footer-newsletter__text footer-newsletter__text--social">
-                                        Pratite nas u stopu:
-                                    </div>
-                                    <div class="footer-newsletter__social-links social-links">
-                                        <ul class="social-links__list">
-                                            <li class="social-links__item social-links__item--facebook"><a href="https://www.facebook.com/autotarget.ba" target="_blank"><img src="/AutoTarget/images/icon/facebook1.png" alt=""></a></li>
-                                            <li class="social-links__item social-links__item--twitter"><a href="https://www.instagram.com/auto.target/" target="_blank"><img src="/AutoTarget/images/icon/Instagram1.png" alt=""></a></li>
-                                            <li class="social-links__item social-links__item--youtube"><a href="https://olx.ba/shops/AutoTarget/aktivni" target="_blank"><img src="/AutoTarget/images/icon/njuskalo1.png" alt=""></a></li>
-                                            <li class="social-links__item social-links__item--instagram"><a href="https://www.njuskalo.hr/moje-njuskalo/poslovni/moji-oglasi/aktivni-oglasi" target="_blank"><img src="/AutoTarget/images/icon/OLX1.png" alt=""></a></li>
-                                        </ul>
-                                    </div>
+                                    <img src="/AutoTarget/images/logo/qrkod.png" alt="QR kod" style="width: 400px; margin-top: 18px;">
                                 </div>
                             </div>
                         </div>
