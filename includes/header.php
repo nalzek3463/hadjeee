@@ -56,7 +56,7 @@
                 </div>
                 <div class="header__search">
                     <div class="search">
-                        <form action="" class="search__body" method="GET" id="filter-form">
+                        <form action="webshop.php" class="search__body" method="POST" id="filter-form">
                             <div class="search__shadow"></div>
                             <input class="search__input" type="text" placeholder="Upišite kataloški broj dijela" name="kataloski_broj" id="kataloski_broj">
                             <button class="search__button search__button--start" type="button">
@@ -78,7 +78,7 @@
                                 <div class="search__decor-end"></div>
                             </div>
                             
-                            <div class="search__dropdown search__dropdown--vehicle-picker vehicle-picker">
+                           <!-- <div class="search__dropdown search__dropdown--vehicle-picker vehicle-picker">
                                 <div class="search__dropdown-arrow"></div>
                                 <div class="vehicle-picker__panel vehicle-picker__panel--list vehicle-picker__panel--active" data-panel="list">
                                     <div class="vehicle-picker__panel-body">
@@ -190,7 +190,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </form>
                     </div>
                 </div>
@@ -214,3 +214,5 @@
         </header>
         <!-- site__header / end -->
     </header>
+
+

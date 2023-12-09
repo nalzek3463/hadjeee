@@ -45,22 +45,22 @@
                         <p style="font-size: 30px; font-family: 'Anton', sans-serif; letter-spacing: 1px;">Više od 200.000 dijelova na stanju.</p>
                         </p>
                     </div>
-                    <form class="block-finder__form" action="webshop.php" method="GET" id="filter-form">
+                    <form class="block-finder__form" action="webshop.php" method="POST" id="filter-form">
                         <div class="block-finder__form-control block-finder__form-control--select">
                             <select name="naziv_artikla" aria-label="Naziv artikla" id="naziv_artikla">
-                                <option value="none">Odaberi naziv artikla</option>
+                                <option value="#">Odaberi naziv artikla</option>
                                 <?php include("./includes/lista/listaNaziviArtikala.php"); ?>
                             </select>
                         </div>
                         <div class="block-finder__form-control block-finder__form-control--select">
-                            <select id="marka" name="marka" aria-label="Vehicle Make" onchange="uraditip(this.value, 'tip')" disabled>
-                                <option value="none">Odaberi Marku</option>
+                            <select id="marka" name="marka" aria-label="Marka vozila" onchange="uraditip(this.value, 'tip')" disabled>
+                                <option value="#">Odaberi Marku</option>
                                 <?php include("./includes/lista/listaMarka.php"); ?>
                             </select>
                         </div>
                         <div class="block-finder__form-control block-finder__form-control--select">
                             <select id="tip" name="tip" aria-label="Vehicle Model" disabled>
-                                <option value="none">Odaberi Model</option>
+                                <option value="#">Odaberi Model</option>
                                 <?php include("./includes/lista/listaModel.php"); ?>
                             </select>
                         </div>
@@ -254,7 +254,7 @@
             // Dohvati modele vozila za tu marku
             $.ajax({
                 url: './includes/lista/listaModel.php', // Stvorite PHP skriptu koja će dohvatiti modele za idMarke
-                type: 'GET',
+                type: 'POST',
                 data: {
                     idMarke: idMarke
                 },
@@ -271,7 +271,7 @@
 
         $(document).ready(function() {
             // Handler za submit forme za filtriranje
-            $("#filter-form").submit(function(event) {
+            /*$("#filter-form").submit(function(event) {
                 event.preventDefault();
                 var kataloskiBroj = $("#kataloski_broj").val();
                 var nazivArtikla = $("#naziv_artikla").val();
@@ -282,7 +282,7 @@
                 window.location.href = "webshop.php?kataloski_broj=" + kataloskiBroj + "&naziv_artikla=" + nazivArtikla + "&marka=" + marka + "&tip=" + model;
 
 
-            });
+            }); */
 
             // Handler za resetiranje filtera
             $("#reset-filter").click(function() {

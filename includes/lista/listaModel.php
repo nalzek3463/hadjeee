@@ -11,9 +11,9 @@ if (isset($_GET['idMarke'])) {
         $modeliOptions = mysqli_fetch_all($result, MYSQLI_ASSOC);
         foreach ($modeliOptions as $option) {
             $modelID = $option['id'];
-            $model = $option['tip'];
-            echo "<option value='$modelID|$model'>$model</option>";
-            
+            $modelNaziv = $option['tip'];
+            /*echo "<option value='$modelID|$model'>$model</option>";*/
+            echo "<option value='$modelID'>$modelNaziv</option>";
         }
     }
 

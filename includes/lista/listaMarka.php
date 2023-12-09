@@ -9,9 +9,9 @@ if ($result->num_rows > 0) {
   
 
     while ($row = $result->fetch_assoc()) {
-        $idMarke = $row['id'];
-        $markaVozila = $row['naziv'];
-        echo "<option value='$idMarke|$markaVozila'>$markaVozila</option>";
+        $markaID = $row['id'];
+        $markaNaziv = $row['naziv'];
+        echo "<option value='$markaID'>$markaNaziv</option>";
     }
 
 }

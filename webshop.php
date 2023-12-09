@@ -53,14 +53,24 @@ include("./includes/filterPaginacijaQuery.php")
                                                 <h4>Filter pretraga</h4>
                                             </div>
                                             <div style="width: 85%; margin-left: 20px;">
-                                                <form action="#" method="GET" id="filter-form">
+                                                <form action="webshop.php" method="POST" id="filter-form">
                                                     <label for="kataloski_broj">Kataloški broj dijela:</label>
                                                     <input class="form-control" type="text" placeholder="Upiši kataloški broj" name="kataloski_broj" id="kataloski_broj"><br>
 
+                                               <!-- 
                                                     <label for="naziv_artikla">Naziv dijela:</label>
                                                     <input class="form-control" type="text" placeholder="Upiši naziv artikla" name="naziv_artikla" id="naziv_artikla" list="listadio"><br>
-                                                    <?php include("./includes/lista/listaDio.php"); ?>
+                                                    
+                                                -->
 
+                                                    <div class="form-group">
+                                                        <label for="naziv_artikla">Naziv artikla:</label>
+                                                        <select class="form-control form-control-select2" id="naziv_artikla" name="naziv_artikla" aria-label="Naziv artikla">
+                                                            <option value="#">Odaberi naziv artikla</option>
+                                                            <?php include("./includes/lista/listaNaziviArtikala.php"); ?>
+                                                        </select>
+                                                    </div>
+                                                    
                                                     <div class="form-group">
                                                         <label for="manufacturer">Marka vozila:</label>
                                                         <select class="form-control form-control-select2" id="marka" name="marka" aria-label="Marka vozila" onchange="document.getElementById('tipgrupa').style.display = '';uraditip(this.value, 'tip')">
@@ -87,6 +97,7 @@ include("./includes/filterPaginacijaQuery.php")
                             </div>
                         </div>
                     </div>
+                    
                     <div class="block-split__item block-split__item-content col-auto">
                         <div class="block">
                             <div class="products-view">
@@ -154,7 +165,7 @@ include("./includes/filterPaginacijaQuery.php")
         // Primjer:
         $.ajax({
             url: './includes/lista/listaModel.php', // Stvorite PHP skriptu koja će dohvatiti modele za idMarke
-            type: 'GET',
+            type: 'POST',
             data: {
                 idMarke: idMarke
             },
@@ -172,17 +183,17 @@ include("./includes/filterPaginacijaQuery.php")
 
         
         // Handler za submit forme za filtriranje
-      /*  $("#filter-form").submit(function(event) {
+        $("#filter-form").submit(function(event) {
             event.preventDefault();
 
-            var kataloskiBroj = $("#kataloski_broj").val();
+           /* var kataloskiBroj = $("#kataloski_broj").val();
             var nazivArtikla = $("#naziv_artikla").val();
             var marka = $("#marka").val();
             var model = $("#tip").val();
 
             // Dodajte kodiraniModel u URL za pretragu
-            window.location.href = "webshop.php?kataloski_broj=" + kataloskiBroj + "&naziv_artikla=" + nazivArtikla + "&marka=" + marka + "&tip=" + model;
-        }); */
+            window.location.href = "webshop.php?kataloski_broj=" + kataloskiBroj + "&naziv_artikla=" + nazivArtikla + "&marka=" + marka + "&tip=" + model;*/
+        }); 
 
         // Handler za resetiranje filtera
         $("#reset-filter").click(function() {
