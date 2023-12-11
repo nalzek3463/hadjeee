@@ -62,12 +62,12 @@
         <div class="site__body">
             <div class="block post-view">
                 <div class="post-view__header post-header post-header--has-image">
-                    <div class="post-header__image" style="background-image: url('$image');"></div>
+                    <div class="post-header__image" style="background-image: url('/AutoTarget/images/backgroundtest.png');"></div>
                     <div class="post-header__body">
                         <div class="post-header__categories">
                             <ul class="post-header__categories-list">
                                 <li class="post-header__categories-item">
-                                    <a href="blog.php" class="post-header__categories-link">Blogovi</a>
+                                    <a href="blog.php" class="post-header__categories-link">Blog</a>
                                 </li>
                             </ul>
                         </div>
@@ -147,16 +147,14 @@
                         <div class="post-view__item post-view__item-post">
                             <div class="post-view__card post">
                                 <div class="post__body typography">
+                                    <figure>
+                                        <img src="/AutoTarget/blog/assets/images/$image" alt="">
+                                    </figure>
                                    <p> 
 HTML;
-            echo html_entity_decode($body);
-            echo <<<HTML
+                                        echo html_entity_decode($body);
+echo <<<HTML
                                     </p>
-                                    <figure>
-                                        <a href="">
-                                            <img src="$image" alt="">
-                                        </a>
-                                    </figure>
                                 </div>
                             </div>
                         </div>

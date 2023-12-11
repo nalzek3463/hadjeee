@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -54,6 +53,7 @@
         $blogObjave = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
         foreach ($blogObjave as $blogObjava) {
+          $maxLenght = 250;
           $id = $blogObjava['id'];
           $user_id = $blogObjava['user_id'];
           $topic_id = $blogObjava['topic_id'];
@@ -62,22 +62,26 @@
           $body = $blogObjava['body'];
           $created_at = $blogObjava['created_at'];
 
+          if (strlen($body) > $maxLenght) {
+            $kratkiBody = substr($body, 0, $maxLenght) . '...';
+          } else {
+            $kratkiBody = $body;
+          }
+
           echo <<<HTML
 
     <div class="post clearfix">
       <img src="http://localhost/AutoTarget/blog/assets/images/$image" alt="" class="post-image">
-      <div class="post-preview">
+      <div class="post-preview" style="margin: 38px 0;">
         <h2><a href="./full_blog.php?id=$id" style="color: black;">$title</a></h2>
         <i class="far fa-user"> Auto Target</i>
         &nbsp;
         <i class="far fa-calendar"> $created_at</i>
-        <p class="preview-text">
-          $body
-        </p>
         <a href="./full_blog.php?id=$id" class="btn btn-warning dugmeCitaj">Čitaj više</a>
       </div>
     </div>
 HTML;
+
         }
         ?>
 
